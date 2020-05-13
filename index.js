@@ -1,10 +1,12 @@
-const math=require('math')
+
 
 const p=23,g=5;
-const secret_integer=new Date().getTime();
+const secret_integer=4;//new Date().getTime();
 
-const A=math.pow(g,secret_integer) % p;
+const A=Math.pow(g,secret_integer) % p;
 
 function computesSecretKey(B){
-    return math.pow(g,secret_integer) % p;
+    return Math.pow(B,secret_integer) % p;
 }
+
+console.log(computesSecretKey(Math.pow(g,3) % p))
